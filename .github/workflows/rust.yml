@@ -1,0 +1,15 @@
+name: Rust
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: install mdbook
+      run: cargo install mdbook --version 0.1.8
+    - name: Build
+      run: mdbook build
