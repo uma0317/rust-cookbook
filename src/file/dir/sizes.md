@@ -1,4 +1,4 @@
-## Recursively calculate file sizes at given depth
+## 与えられた深さで再帰的にファイルサイズを計算する
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 

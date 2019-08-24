@@ -1,4 +1,4 @@
-## Find loops for a given path
+## 与えられたパスをループして探す
 
 [![same_file-badge]][same_file] [![cat-filesystem-badge]][cat-filesystem]
 

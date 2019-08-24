@@ -1,4 +1,4 @@
-##  Traverse directories while skipping dotfiles
+##  ドットファイルをスキップしながらディレクトリを走査する
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 

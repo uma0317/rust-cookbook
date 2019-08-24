@@ -1,4 +1,4 @@
-## Access a file randomly using a memory map
+## メモリマップを使ってランダムにファイルにアクセする
 
 [![memmap-badge]][memmap] [![cat-filesystem-badge]][cat-filesystem]
 

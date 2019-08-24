@@ -1,4 +1,4 @@
-##  Recursively find all files with given predicate
+##  与えられた値のファイルを再帰的に探す
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 

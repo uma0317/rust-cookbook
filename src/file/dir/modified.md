@@ -1,4 +1,4 @@
-## File names that have been modified in the last 24 hours
+## 過去24時間以内に変更されたファイル名
 
 [![std-badge]][std] [![cat-filesystem-badge]][cat-filesystem]
 

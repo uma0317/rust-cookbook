@@ -1,4 +1,4 @@
-## Read lines of strings from a file
+## ファイルから文字列の行を読み取る
 
 [![std-badge]][std] [![cat-filesystem-badge]][cat-filesystem]
 

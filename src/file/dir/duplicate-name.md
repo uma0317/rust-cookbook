@@ -1,4 +1,4 @@
-## Recursively find duplicate file names
+## 重複したファイル名を再帰的に探す
 
 [![walkdir-badge]][walkdir] [![cat-filesystem-badge]][cat-filesystem]
 

@@ -1,4 +1,4 @@
-## Find all files with given pattern ignoring filename case.
+## ファイル名の大文字小文字を無視して、指定されたパターンを持つすべてのファイルを検索する.
 
 [![glob-badge]][glob] [![cat-filesystem-badge]][cat-filesystem]
 
