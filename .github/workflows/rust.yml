@@ -12,4 +12,4 @@ jobs:
     - name: install mdbook
       run: cargo install mdbook --version 0.1.8
     - name: Build
-      run: mdbook build
+      run: mdbook build -d docs
