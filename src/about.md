@@ -140,26 +140,13 @@ fn run() -> Result<()> {
 
 より詳細なRustでのエラーハンドリングについては[Rust bookのこのページ][error-docs] と[このブログ記事][error-blog]を読んでください。
 
-## crateの表現について
+## crateの選定について
 
-This cookbook is intended eventually to provide expansive coverage of
-the Rust crate ecosystem, but today is limited in scope while we get
-it bootstrapped and work on the presentation. Hopefully, starting
-from a small scope and slowly expanding will help the cookbook become
-a high-quality resource sooner, and allow it to maintain consistent
-quality levels as it grows.
+このCookbookは様々なRustエコシステムを紹介するものです。しかし、今日では紹介する範囲が限界を迎えています。できれば、小さな範囲から始めてゆっくりと拡大することで、Cookbookがより高品質のリソースになり、成長しても一貫した品質レベルを維持できるようになります。
 
-At present the cookbook is focused on the standard library, and on
-"core", or "foundational", crates—those crates that make up the most
-common programming tasks, and that the rest of the ecosystem builds
-off of.
+現在Cookbookは基本的なライブラリに焦点を当てており、"コア"や"基礎"のクレートは多くの一般的なプログラミングタスクを解決し、そして、残りのエコシステムが構築されます。
 
-The cookbook is closely tied to the [Rust Libz Blitz], a project to
-identify, and improve the quality of such crates, and so it largely
-defers crate selection to that project. Any crates that have already
-been evaluated as part of that process are in scope for the cookbook,
-as are crates that are pending evaluation.
-
+このCookbookは[Rust Libz Blitz]と密接な関係にあります。プロジェクトの特定し、クレートの品質を改善しています。そのためこのプロジェクトでのクレートの選択は大幅に遅れます。このプロセスで評価済みのクレートがCookbookの範囲であり、評価中のクレートも同様です。
 {{#include links.md}}
 
 [index]: intro.html
