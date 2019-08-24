@@ -147,11 +147,8 @@
                 <div id="content" class="content">
                     <main>
                         <a class="header" href="print.html#cookin-with-rust" id="cookin-with-rust"><h1>Cookin' with Rust</h1></a>
-<p>This <em>Rust Cookbook</em> is a collection of
-simple examples that demonstrate good practices to accomplish common
-programming tasks, using the crates of the Rust ecosystem.</p>
-<p><a href="about.html">Read more about <em>Rust Cookbook</em></a>, including tips for
-how to read the book, how to use the examples, and notes on conventions.</p>
+<p><em>Rust Cookbook</em> はRustエコシステムのクレートを使った、よくあるプログラミングタスクを解決するグッドプラクティスのコレクションです。</p>
+<p><a href="about.html"><em>Rust CookBook</em> の詳細はこちらをご覧ください。</a>この本の読み方、例文の使用法、慣例に対する注記が書いてあります。</p>
 <a class="header" href="print.html#contributing" id="contributing"><h2>Contributing</h2></a>
 <p>This project is intended to be easy for new Rust programmers to
 contribute to, and an easy way to get involved with the Rust
@@ -503,14 +500,12 @@ Keep lines sorted.
 <p>Rustプログラマー達は気楽に最初から最後のセクションまで読むべきです。そうすることでクレートエコシステムの概念をよく理解できるはずです。索引かサイドバーのセクションのヘッダーをクリックすることでそのセクションに移動することができます。</p>
 <p>目的のレシピをクックブックから探すことは難しいです。レシピを探す一番簡単な方法は索引に目を通し、興味のあるクレートやカテゴリを見つけ、レシピの名前をクリックして見ることです。これは将来改善されるでしょう。</p>
 <a class="header" href="print.html#aレシピの使い方" id="aレシピの使い方"><h2>レシピの使い方</h2></a>
-<p>Recipes are designed to give you instant access to working code, along
-with a full explanation of what it is doing, and to guide you to
-further information.</p>
-<p>All recipes in the cookbook are full, self contained programs, so
-that they may be copied directly into your own projects for
-experimentation. To do so follow the instructions below.</p>
-<p>Consider this example for &quot;generate random numbers within a range&quot;:</p>
-<p><a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a> <a href="https://crates.io/categories/science"><img src="https://badge-cache.kominick.com/badge/science--x.svg?style=social" alt="cat-science-badge" /></a></p>
+<p>レシピは、稼働中のコードにすぐに適用できるように設計されており、実行中のコードの詳細な説明とともに、さらに詳しい情報を提供します。</p>
+<p>クックブックのすべてのレシピは完全な自己完結型プログラムなので、
+あなたは実験的に自身のプロジェクトに直接コピーすることかもしれません。
+その場合、以下の手順に従ってください。</p>
+<p>&quot;範囲を指定して乱数を作る&quot;を例にします。:
+<a href="https://docs.rs/rand/"><img src="https://badge-cache.kominick.com/crates/v/rand.svg?label=rand" alt="rand-badge" /></a> <a href="https://crates.io/categories/science"><img src="https://badge-cache.kominick.com/badge/science--x.svg?style=social" alt="cat-science-badge" /></a></p>
 <pre><pre class="playpen"><code class="language-rust">extern crate rand;
 use rand::Rng;
 
@@ -519,37 +514,23 @@ fn main() {
     println!(&quot;Random f64: {}&quot;, rng.gen::&lt;f64&gt;());
 }
 </code></pre></pre>
-<p>To work with it locally we can run the following commands to create
-a new cargo project, and change to that directory:</p>
+<p>これをローカルで動かすには次のコマンドで新しいCargoプロジェクトを作り、そのディレクトリに移動しましょう。:</p>
 <pre><code class="language-sh">cargo new my-example --bin
 cd my-example
 </code></pre>
-<p>Now, we also need to add the necessary crates to <a href="http://doc.crates.io/manifest.html">Cargo.toml</a>, as
-indicated by the crate badges, in this case just &quot;rand&quot;. To do so,
-we'll use the <code>cargo add</code> command, which is provided by the
-<a href="https://github.com/killercup/cargo-edit"><code>cargo-edit</code></a> crate, which we need to install first:</p>
+<p>次にクレートバッジに示されたクレートを<a href="http://doc.crates.io/manifest.html">Cargo.toml</a>に追加する必要があります。この例では&quot;rand&quot;のみです。これをするのに、<a href="https://github.com/killercup/cargo-edit"><code>cargo-edit</code></a>クレートが提供している<code>cargo add</code>コマンドを使います。これを最初にインストールする必要があります。:</p>
 <pre><code class="language-sh">cargo install cargo-edit
 cargo add rand
 </code></pre>
-<p>Now you can replace <code>src/main.rs</code> with the full contents of the
-example and run it:</p>
+<p>これで、<code>src/main.rs</code>を例のコードに置き換えて動かすことができます。:</p>
 <pre><code class="language-sh">cargo run
 </code></pre>
-<p>The crate badges that accompany the examples link to the crates' full
-documentation on <a href="https://docs.rs">docs.rs</a>, and is often the next documentation you
-should read after deciding which crate suites your purpose.</p>
+<p>クレートバッジは<a href="https://docs.rs">docs.rs</a>にあるドキュメントへのリンクになっています。また、どのクレートを目的に使用するかを決定した後に、読んでください。</p>
 <a class="header" href="print.html#aエラーハンドリングについて" id="aエラーハンドリングについて"><h2>エラーハンドリングについて</h2></a>
-<p>Error handling in Rust is robust when done correctly, but in today's
-Rust it requires a fair bit of boilerplate. Because of this one often
-sees Rust examples filled with <code>unwrap</code> calls instead of proper error
-handling.</p>
-<p>Since these recipes are intended to be reused as-is and encourage best
-practices, they set up error handling correctly when there are
-<code>Result</code> types involved.</p>
-<p>The basic pattern we use is to have a <code>fn run() -&gt; Result</code> that acts
-like the &quot;real&quot; main function. We use the <a href="https://docs.rs/error-chain/">error-chain</a> crate to make
-<code>?</code> work within <code>run</code>.</p>
-<p>The structure generally looks like:</p>
+<p>Rustでのエラーハンドリングは適切に扱えば堅牢ですが、今日のRustは少し定型文が必要です。なぜならRust examplesは本来のエラーハンドリングの代わりに<code>unwrap</code>が多用されています。</p>
+<p>これらのレシピはそのまま再利用することを目的としたベストプラクティスなため、<code>Result</code>型がある時は適切なエラーハンドリングが設定されています。</p>
+<p>基本的なパターンは&quot;本当&quot;のmain関数のように<code>fn run() -&gt; Result</code>を使用することです。<a href="https://docs.rs/error-chain/">error-chain</a>を使用して<code>?</code>は<code>run</code>内で動作します。</p>
+<p>大抵の構造は以下の通り:</p>
 <pre><pre class="playpen"><code class="language-rust">#[macro_use]
 extern crate error_chain;
 
@@ -583,10 +564,8 @@ quick_main!(run);
 library error types. The automatic conversions make the <code>?</code> operator
 work. The <code>quick_main!</code> macro generates the actual <code>main</code> function and
 prints out the error if one occurred.</p>
-<p>For the sake of readability error handling boilerplate is hidden by
-default like below.  In order to read full contents click on the
-&quot;expand&quot; (<i class="fa fa-expand"></i>) button located in the top
-right corner of the snippet.</p>
+<p>これはカスタム<code>Error</code>, <code>Result</code>型を定義するために<code>error_chain!</code>マクロを使って、2つの標準ライブラリーエラー型から自動変換します。自動変換は<code>?</code>演算子を作成します。<code>quick_main!</code>マクロは<code>main</code>関数を作り、エラーが起きたら出力します。</p>
+<p>可読性のためにエラーハンドリングの定型文は下記のように隠されています。右上にある&quot;expand&quot; (<i class="fa fa-expand"></i>)ボタンをクリックすると全コードを読むことができます。</p>
 <pre><pre class="playpen"><code class="language-rust"># #[macro_use]
 # extern crate error_chain;
 extern crate url;
@@ -608,24 +587,11 @@ fn run() -&gt; Result&lt;()&gt; {
 #
 # quick_main!(run);
 </code></pre></pre>
-<p>For more background on error handling in Rust, read <a href="https://doc.rust-lang.org/book/error-handling.html">this page of the
-Rust book</a> and <a href="https://brson.github.io/2016/11/30/starting-with-error-chain">this blog post</a>.</p>
-<a class="header" href="print.html#crateの表現について" id="crateの表現について"><h2>crateの表現について</h2></a>
-<p>This cookbook is intended eventually to provide expansive coverage of
-the Rust crate ecosystem, but today is limited in scope while we get
-it bootstrapped and work on the presentation. Hopefully, starting
-from a small scope and slowly expanding will help the cookbook become
-a high-quality resource sooner, and allow it to maintain consistent
-quality levels as it grows.</p>
-<p>At present the cookbook is focused on the standard library, and on
-&quot;core&quot;, or &quot;foundational&quot;, crates—those crates that make up the most
-common programming tasks, and that the rest of the ecosystem builds
-off of.</p>
-<p>The cookbook is closely tied to the <a href="https://internals.rust-lang.org/t/rust-libz-blitz/5184">Rust Libz Blitz</a>, a project to
-identify, and improve the quality of such crates, and so it largely
-defers crate selection to that project. Any crates that have already
-been evaluated as part of that process are in scope for the cookbook,
-as are crates that are pending evaluation.</p>
+<p>より詳細なRustでのエラーハンドリングについては<a href="https://doc.rust-lang.org/book/error-handling.html">Rust bookのこのページ</a> と<a href="https://brson.github.io/2016/11/30/starting-with-error-chain">このブログ記事</a>を読んでください。</p>
+<a class="header" href="print.html#crateの選定について" id="crateの選定について"><h2>crateの選定について</h2></a>
+<p>このCookbookは様々なRustエコシステムを紹介するものです。しかし、今日では紹介する範囲が限界を迎えています。できれば、小さな範囲から始めてゆっくりと拡大することで、Cookbookがより高品質のリソースになり、成長しても一貫した品質レベルを維持できるようになります。</p>
+<p>現在Cookbookは基本的なライブラリに焦点を当てており、&quot;コア&quot;や&quot;基礎&quot;のクレートは多くの一般的なプログラミングタスクを解決し、そして、残りのエコシステムが構築されます。</p>
+<p>このCookbookは<a href="https://internals.rust-lang.org/t/rust-libz-blitz/5184">Rust Libz Blitz</a>と密接な関係にあります。プロジェクトの特定し、クレートの品質を改善しています。そのためこのプロジェクトでのクレートの選択は大幅に遅れます。このプロセスで評価済みのクレートがCookbookの範囲であり、評価中のクレートも同様です。</p>
 <!--
 Links, in a few categories. Follow the existing structure.
 Keep lines sorted.
