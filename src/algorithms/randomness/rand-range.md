@@ -2,7 +2,7 @@
 
 [![rand-badge]][rand] [![cat-science-badge]][cat-science]
 
-[`Rng::gen_range`]で0以上10未満の乱数を作る。
+[`Rng::gen_range`]で 0 以上 10 未満の乱数を作る。
 
 ```rust
 extern crate rand;
@@ -11,8 +11,8 @@ use rand::Rng;
 
 fn main() {
     let mut rng = rand::thread_rng();
-    println!("Integer: {}", rng.gen_range(0, 10));
-    println!("Float: {}", rng.gen_range(0.0, 10.0));
+    println!("Integer: {}", rng.gen_range(0..10));
+    println!("Float: {}", rng.gen_range(0.0..10.0));
 }
 ```
 
@@ -38,6 +38,6 @@ fn main() {
 }
 ```
 
-[`Uniform`]: https://docs.rs/rand/*/rand/distributions/uniform/struct.Uniform.html
-[`Rng::gen_range`]: https://doc.rust-lang.org/rand/*/rand/trait.Rng.html#method.gen_range
+[`uniform`]: https://docs.rs/rand/*/rand/distributions/uniform/struct.Uniform.html
+[`rng::gen_range`]: https://doc.rust-lang.org/rand/*/rand/trait.Rng.html#method.gen_range
 [uniform distribution]: https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)
