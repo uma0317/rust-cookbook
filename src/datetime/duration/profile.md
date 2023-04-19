@@ -2,9 +2,9 @@
 
 [![std-badge]][std] [![cat-time-badge]][cat-time]
 
-[`time::Instant::now`]からの経過人を計測する。
+[`time::Instant::now`]からの経過時間を計測する。
 
-[`time::Instant::elapsed`]を呼び、このサンプルが実行し終わる時間である[`time::Duration`]取得し表示する。
+[`time::Instant::elapsed`]を呼び、このサンプルが実行し終わる時間である[`time::Duration`]を取得し表示する。
 このメソッドは[`time::Instant`]に変換したりリセットできない。
 
 ```rust
